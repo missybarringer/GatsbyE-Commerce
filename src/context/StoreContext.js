@@ -1,12 +1,12 @@
 import React, { createContext, useState } from 'react'
 
-const StoreContext = createContext({
+export const StoreContext = createContext({
     isCartOpen: false,
     cart: [],
-    addProductToCart: () => {}
+    addProductToCart: () => { console.log('added') },
 })
 
-const StoreProvider = ({children}) => {
+export const StoreProvider = ({children}) => {
     return(
         <StoreContext.Provider>
             {children}

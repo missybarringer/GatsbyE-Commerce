@@ -1,11 +1,14 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useContext } from "react"
 import { FaShoppingCart } from "react-icons/fa"
 import "../style.scss"
+import { StoreContext } from '../context/StoreContext'
 import logo from "../images/logo.svg"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => {
+  const { isCartOpen, addProductToCart } = useContext(StoreContext)
+  return (
   <header
     className="navbar"
     style={{ background: "var(--purp)", boxShadow: "var(--elevation-2)" }}
@@ -25,7 +28,7 @@ const Header = ({ siteTitle }) => (
       </div>
     </div>
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
