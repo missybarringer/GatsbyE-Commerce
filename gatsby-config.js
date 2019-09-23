@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        shopName: "YOUR_SHOPNAME",
-        accessToken: "YOUR_TOKEN",
+        shopName: "web-wabi-sabi",
+        accessToken: "50c676159b0e37611699ecd324eae2c2",
         verbose: true,
         paginationSize: 30,
       },
