@@ -1,10 +1,9 @@
 import React, { createContext, useState } from 'react'
 
 const defaultValues = {
-    isCartOpen: false,
-    cart: [],
-    addProductToCart: () => {
-        console.log('added');
+        isCartOpen: false,
+        cart: [],
+        addProductToCart: () => { console.log('added')
     },
 }
 export const StoreContext = createContext(defaultValues)
